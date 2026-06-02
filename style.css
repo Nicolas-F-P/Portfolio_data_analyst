@@ -143,9 +143,16 @@ a {
 .skills-grid,
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 22px;
   margin-top: 34px;
+}
+
+.skills-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.projects-grid {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .skill-card,
@@ -158,6 +165,13 @@ a {
 
 .skill-card {
   padding: 26px;
+  border: 1px solid #eef0f3;
+  transition: 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.12);
 }
 
 .skill-card h3,
